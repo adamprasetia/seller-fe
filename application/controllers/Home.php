@@ -70,7 +70,7 @@ class Home extends CI_Controller {
 		$data['content'] = $this->load->view('detail_view', $content, TRUE);
 		$data['meta'] = [
 			'title'=>$content['item']->name,
-			'desc'=>$content['item']->desc,
+			'desc'=>$content['item']->teaser,
 			'keyword'=>$content['item']->keyword,
 			'image'=>base_url($content['item']->image),
 		];
