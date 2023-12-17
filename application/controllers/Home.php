@@ -5,6 +5,7 @@ class Home extends CI_Controller {
 	function __construct()
    	{
     	parent::__construct();
+		$this->db->where('domain', $_SERVER['SERVER_NAME']);
 		$this->store = $this->db->get('store')->row();
    	}
 
