@@ -57,6 +57,13 @@ class Home extends CI_Controller {
 				'title'=>$category->title,
 				'desc'=>$category->desc,
 			];
+		}else{
+			$data['meta'] = [
+				'title'=>'Produk | '.$this->store->title,
+				'desc'=>$this->store->desc,
+				'keyword'=>$this->store->keyword,
+				'image'=>base_url($this->store->image),
+			];	
 		}
 
 		$this->load->view('template_view', $data);
