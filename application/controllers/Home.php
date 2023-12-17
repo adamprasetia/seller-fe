@@ -49,9 +49,9 @@ class Home extends CI_Controller {
 			$this->db->select('name, image, cover as cover, teaser, desc, slug, price');
 		}
 		$content['store'] = $this->store;
+		$this->db->where('hidden !=', 'Y');
 		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
 		$this->db->where('store_id', $this->store->id);
-		$this->db->where('hidden !=', 'Y');
 		$content['category'] = $this->db->get('category')->result();
 		$data['content'] = $this->load->view('produk_view', $content, TRUE);
 		if($slug){
