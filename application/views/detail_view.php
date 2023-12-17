@@ -6,16 +6,11 @@
 	</div>
 </div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<img class="img-fluid" src="<?php echo base_url($item->image)?>" alt="">
-		</div>
-		<div class="col-md-6">
-			<?php echo $item->desc ?>
-		</div>
-	</div>
+<div class="container text-center">
+	<img class="img-fluid" src="<?php echo base_url($item->image)?>" alt="">
+	<?php echo $item->desc ?>
 </div>
+
 <?php $gallery = json_decode($item->gallery);
 	if(!empty($gallery)):
 ?>
