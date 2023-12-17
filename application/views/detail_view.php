@@ -1,6 +1,6 @@
 <?php $this->load->view('nav_view') ?>
 
-<div class="container pb-5" style="margin-top:100px">
+<div class="container" style="margin-top:100px">
 	<div class="m-4 text-center">
 		<h1><?php echo $item->name ?></h1>
 	</div>
