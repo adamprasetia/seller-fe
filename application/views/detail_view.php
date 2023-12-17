@@ -63,6 +63,6 @@
 			<a download href="<?php echo base_url('assets/pdf/'.$item->pdf) ?>" class="btn btn-danger">Donwload PDF</a>
 		<?php endif ?>
 
-		<a href="https://api.whatsapp.com/send?phone=<?php echo $store->phone ?>&text=<?php echo config_item('wa') ?>" class="btn btn-danger">Info Lebih Lanjut</a>
+		<a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $store->wa ?>&text=<?php echo config_item('wa') ?>" class="btn btn-danger">Info Lebih Lanjut</a>
 	</div>
 </div>
