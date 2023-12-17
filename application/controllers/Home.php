@@ -79,6 +79,8 @@ class Home extends CI_Controller {
 		$this->db->where('store_id', $this->store->id);
 		$content['store'] = $this->store;
 		$content['item'] = $this->db->where('slug', $slug)->get('item')->row();
+		$this->db->where('store_id', $this->store->id);
+		$content['category'] = $this->db->get('category')->result();
 		$data['content'] = $this->load->view('detail_view', $content, TRUE);
 		$data['meta'] = [
 			'title'=>$content['item']->name,
