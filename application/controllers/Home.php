@@ -47,6 +47,7 @@ class Home extends CI_Controller {
 		}else{
 			$this->db->select('name, image, cover as cover, teaser, desc, slug, price');
 		}
+		$content['store'] = $this->store;
 		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
 		$this->db->where('store_id', $this->store->id);
 		$content['category'] = $this->db->get('category')->result();
@@ -64,6 +65,7 @@ class Home extends CI_Controller {
 	public function detail($slug)
 	{
 		$this->db->where('store_id', $this->store->id);
+		$content['store'] = $this->store;
 		$content['item'] = $this->db->where('slug', $slug)->get('item')->row();
 		$data['content'] = $this->load->view('detail_view', $content, TRUE);
 		$data['meta'] = [
