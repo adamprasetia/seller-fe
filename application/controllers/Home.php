@@ -18,9 +18,11 @@ class Home extends CI_Controller {
 		}
 		$this->db->where('store_id', $this->store->id);
 		$this->db->where('headline', 'Y');
-		$this->db->where('hidden !=', 'Y');
+		$this->db->where('active', 'Y');
 		$content['headline'] = $this->db->order_by('rank asc')->get('item')->result();
+
 		$this->db->where('store_id', $this->store->id);
+		$this->db->where('active', 'Y');
 		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
 		$this->db->where('store_id', $this->store->id);
 		$content['store'] = $this->store;
@@ -49,7 +51,7 @@ class Home extends CI_Controller {
 			$this->db->select('name, image, cover as cover, teaser, desc, slug, price');
 		}
 		$content['store'] = $this->store;
-		$this->db->where('hidden !=', 'Y');
+		$this->db->where('active', 'Y');
 		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
 		$this->db->where('store_id', $this->store->id);
 		$content['category'] = $this->db->get('category')->result();
