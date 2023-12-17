@@ -15,6 +15,12 @@
           <a class="nav-link" href="<?php echo base_url('produk') ?>">Produk</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="https://api.whatsapp.com/send?phone=<?php echo $store->phone ?>">Test Drive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://api.whatsapp.com/send?phone=<?php echo $store->phone ?>">Simulasi Kredit</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="https://api.whatsapp.com/send?phone=<?php echo $store->phone ?>&text=<?php echo config_item('wa') ?>">Hubungi Kami</a>
         </li>
       </ul>
