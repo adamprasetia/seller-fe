@@ -1,5 +1,5 @@
 <header>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-lg fixed-top navbar-<?php echo !empty($store->theme)?$store->theme:'dark' ?> bg-<?php echo !empty($store->theme)?$store->theme:'dark' ?>">
   <div class="container">
     <a class="navbar-brand" href="<?php echo base_url() ?>"><img src="<?php echo base_url($store->logo) ?>" alt="Logo <?php echo $store->title ?>"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
