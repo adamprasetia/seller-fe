@@ -53,14 +53,14 @@
 		</main>
 
 		<hr>
-		<div class="bg-dark text-light pb-5 pt-3"> 
+		<div class="bg-dark text-light pt-3"> 
 			<footer class="container">
 				<div class="row">
 					<div class="col-md-4">
 						<p><strong><?php echo $store->title ?></strong></p>
 						<p><?php echo $store->address ?></p>
 						<h3><?php echo $store->pic ?></h3>					
-						<h4><?php echo $store->phone ?></h4>					
+						<h4><img width="40px" src="<?php echo base_url('assets/images/ico-wa-white.png') ?>" alt=""> <?php echo $store->phone ?></h4>					
 					</div>
 					<div class="col-md-4">
 						<p><strong>Model</strong></p>
@@ -74,7 +74,13 @@
 						<p class="float-right"><a class="text-light" href="#">Back to top</a></p>
 					</div>
 				</div>
-			  </footer>
+			</footer>
+			<div class="bg-dark text-center">
+				<small>Develop by <a href="https://www.linkedin.com/in/adam-prasetia-449405109/">Adam Prasetia</a></small>
+			</div>
+		</div>
+		<div style="position:fixed;bottom:30px;right:10px">
+			<a class="btn btn-success" href="https://api.whatsapp.com/send?phone=<?php echo $store->wa ?>&text=<?php echo config_item('wa') ?>"><img width="40px" src="<?php echo base_url('assets/images/ico-wa-white.png') ?>" alt=""> Kirim Whatsapp</a>
 		</div>
 
 		<script>
