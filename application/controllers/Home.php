@@ -44,6 +44,9 @@ class Home extends CI_Controller {
 
 	public function produk($slug='')
 	{
+		if($this->input->get('search', true)){
+			$this->db->like('name', $this->input->get('search', true));
+		}
 		$this->db->where('store_id', $this->store->id);
 		$this->load->library('user_agent');
 		if(!empty($slug)){

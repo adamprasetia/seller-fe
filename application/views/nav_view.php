@@ -24,6 +24,10 @@
           <a class="nav-link" target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $store->wa ?>&text=<?php echo config_item('wa') ?>">Hubungi Kami</a>
         </li>
       </ul>
+      <form autocomplete="off" class="form-inline my-2 my-lg-0" action="<?php echo base_url('produk') ?>">
+        <input class="form-control mr-sm-2" name="search" autocomplete="off" placeholder="Cari mobil disini.." aria-label="Search">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cari</button>
+      </form>
     </div>
   </div>
 </nav>
