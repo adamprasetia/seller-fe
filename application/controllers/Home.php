@@ -7,6 +7,9 @@ class Home extends CI_Controller {
     	parent::__construct();
 		$this->db->like('domain', $_SERVER['SERVER_NAME']);
 		$this->store = $this->db->get('store')->row();
+		if(empty($this->store)){
+			show_404();
+		}
 		$this->store->wa = str_replace(' ','',$this->store->phone);
 		if(substr($this->store->wa,0,2)=='08'){
 			$this->store->wa = substr_replace($this->store->wa, '628',0, 2);
