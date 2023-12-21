@@ -63,12 +63,14 @@
 						<h4><img width="40px" src="<?php echo base_url('assets/images/ico-wa-white.png') ?>" alt=""> <?php echo $store->phone ?></h4>					
 					</div>
 					<div class="col-md-4">
-						<p><strong>Model</strong></p>
-						<ul>
-							<?php foreach ($category as $key => $value) { ?>
-								<li><a class="text-light" href="<?php echo base_url('produk/'.$value->slug) ?>"><?php echo $value->name ?></a></li>
-							<?php } ?>
-						</ul>
+						<?php if(!empty($category)): ?>
+							<p><strong>Model</strong></p>
+							<ul>
+								<?php foreach ($category as $key => $value) { ?>
+									<li><a class="text-light" href="<?php echo base_url('produk/'.$value->slug) ?>"><?php echo $value->name ?></a></li>
+								<?php } ?>
+							</ul>
+						<?php endif ?>
 					</div>
 					<div class="col-md-4">
 						<p class="float-right"><a class="text-light" href="#">Back to top</a></p>

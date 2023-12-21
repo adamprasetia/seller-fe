@@ -54,5 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['index.html'] = 'home';
 $route['produk'] = 'home/produk';
+$route['sitemap.xml'] = 'sitemap/index';
+$route['(:any)/sitemap.xml'] = 'sitemap/$1';
 $route['produk/(:any)'] = 'home/produk/$1';
 $route['(:any)'] = 'home/detail/$1';
+
+
