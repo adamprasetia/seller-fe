@@ -16,7 +16,7 @@
 			</li>
 		<?php } ?>
 	</ul>
-	<div class="row d-flex">
+	<div class="row d-flex justify-content-center">
 		<?php foreach ($item as $key => $value) { ?>
 			<div class="col-md-3 p-2">
 				<div class="card">
@@ -25,12 +25,17 @@
 					</a>
 					<div class="card-body text-center">
 						<h3 class="card-title"><?php echo $value->name ?></h3>
-						<p class="card-text"><?php echo $value->price ?></p>
-						<a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="View Detail" class="btn btn-danger">View Detail</a>
+						<?php if(!empty($value->price)): ?>
+							<p class="card-text"><?php echo $value->price ?></p>
+						<?php endif ?>
+						<!-- <a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="View Detail" class="btn btn-danger">View Detail</a> -->
 					</div>
 				</div>			
 			</div>
 		<?php } ?>
+	</div>
+	<div class="text-center">
+		<a href="<?php echo base_url('produk') ?>" aria-label="View Detail" class="btn btn-danger">Lihat Produk Selengkapnya</a>
 	</div>
 </div>
 <?php if(!empty($news)):?>
@@ -38,7 +43,7 @@
 <div class="container mt-3 mb-3" >
 	<h2 id="news" class="text-center">News</h2>
 	<p class="text-center">Kumpulan info dan promo menarik</p>
-	<div class="row">
+	<div class="row justify-content-center">
 	<?php foreach ($news as $key => $value) { ?>
 		<div class="col-md-4">
 		<div class="card mb-2">
@@ -52,6 +57,9 @@
 		</div>
 	<?php } ?>
 	</div>
+	<div class="text-center">
+		<a href="<?php echo base_url('news') ?>" aria-label="View Detail" class="btn btn-danger">Lihat Info Selengkapnya</a>
+	</div>
 </div>
 <?php endif ?>
 
@@ -60,7 +68,7 @@
 <div class="container mt-3 mb-3">
 	<h2 id="client" class="text-center">Client</h2>
 	<p class="text-center">Testimoni dari pelanggan setia Toyota</p>
-	<div class="row">
+	<div class="row justify-content-center">
 	<?php foreach ($client as $key => $value) { ?>
 		<div class="col-md-4">
 		<div class="card">
