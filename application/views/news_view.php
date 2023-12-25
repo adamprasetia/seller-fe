@@ -2,7 +2,7 @@
 
 <div class="container mb-3" style="margin-top:100px">
     <h1 id="news" class="text-center">News</h1>
-	<div class="row">
+	<div class="row justify-content-center">
 	<?php foreach ($news as $key => $value) { ?>
 		<div class="col-md-4 mb-2">
 		<div class="card">
