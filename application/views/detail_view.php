@@ -8,6 +8,8 @@
 
 <div class="container text-center">
 	<img class="img-fluid" src="<?php echo base_url($item->image)?>" alt="">
+</div>
+<div class="container mt-2">
 	<?php echo $item->desc ?>
 </div>
 
