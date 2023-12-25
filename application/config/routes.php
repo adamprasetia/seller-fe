@@ -55,11 +55,11 @@ $route['translate_uri_dashes'] = FALSE;
 $route['index.html'] = 'home';
 $route['produk'] = 'produk/index';
 $route['news'] = 'news/index';
+$route['(:any)/sitemap.xml'] = 'sitemap/$1';
 $route['category/(:any)'] = 'produk/index/$1';
 $route['produk/(:any)'] = 'produk/detail/$1';
 $route['news/(:any)'] = 'news/detail/$1';
 $route['sitemap.xml'] = 'sitemap/index';
-$route['(:any)/sitemap.xml'] = 'sitemap/$1';
 $route['(:any)'] = 'home/detail/$1';
 
 
