@@ -10,7 +10,7 @@
 		<?php } ?>
 	</ul>
 
-	<div class="row d-flex">
+	<div class="row d-flex justify-content-center">
 		<?php foreach ($item as $key => $value) { ?>
 			<div class="col-md-3 p-2">
 				<div class="card">
