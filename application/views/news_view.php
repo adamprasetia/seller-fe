@@ -10,6 +10,7 @@
 			<div class="card-body">
 				<a href="<?php echo base_url('news/'.$value->slug) ?>"><h5 class="card-title"><?php echo $value->title ?></h5></a>
 				<p class="card-text"><?php echo $value->desc ?></p>
+                <small><?php echo format_date($value->published_at, 1) ?></small>
 			</div>
 		</div>
 		</div>

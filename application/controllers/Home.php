@@ -40,6 +40,7 @@ class Home extends CI_Controller {
 
 		$this->db->where('store_id', $this->store->id);
 		$this->db->where('deleted_at', null);
+		$this->db->order_by('published_at desc');
 		$this->db->limit(3);
 		$content['news'] = $this->db->get('news')->result();
 

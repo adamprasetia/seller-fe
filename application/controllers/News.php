@@ -26,6 +26,7 @@ class News extends CI_Controller {
         
 		$this->db->where('store_id', $this->store->id);
 		$this->db->where('status', 'PUBLISH');
+        $this->db->order_by('published_at desc');
 		$this->db->limit(9);
 		$content['news'] = $this->db->order_by('published_at asc')->get('news')->result();
 		$this->db->where('store_id', $this->store->id);
