@@ -34,6 +34,7 @@ class Produk extends CI_Controller {
 		}
 		$content['store'] = $this->store;
 		$this->db->where('active', 'Y');
+		$this->db->where('deleted_at', null);
 		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
 		$this->db->where('store_id', $this->store->id);
 		$content['category'] = $this->db->get('category')->result();

@@ -31,6 +31,7 @@ class Home extends CI_Controller {
 
 		$this->db->where('store_id', $this->store->id);
 		$this->db->where('active', 'Y');
+		$this->db->where('deleted_at', null);
 		$this->db->limit(4);
 		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
 
