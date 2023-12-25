@@ -67,7 +67,7 @@
 							<p><strong>Model</strong></p>
 							<ul>
 								<?php foreach ($category as $key => $value) { ?>
-									<li><a class="text-light" href="<?php echo base_url('produk/'.$value->slug) ?>"><?php echo $value->name ?></a></li>
+									<li><a class="text-light" href="<?php echo base_url('category/'.$value->slug) ?>"><?php echo $value->name ?></a></li>
 								<?php } ?>
 							</ul>
 						<?php endif ?>

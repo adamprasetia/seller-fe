@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Produk extends CI_Controller {
 
 	function __construct()
    	{
@@ -16,46 +16,7 @@ class Home extends CI_Controller {
 		}
    	}
 
-	public function index()
-	{
-		$this->load->library('user_agent');
-		if($this->agent->is_mobile()){
-			$this->db->select('name, image, cover_mobile as cover, teaser, desc, slug, price');
-		}else{
-			$this->db->select('name, image, cover as cover, teaser, desc, slug, price');
-		}
-		$this->db->where('store_id', $this->store->id);
-		$this->db->where('headline', 'Y');
-		$this->db->where('active', 'Y');
-		$content['headline'] = $this->db->order_by('rank asc')->get('item')->result();
-
-		$this->db->where('store_id', $this->store->id);
-		$this->db->where('active', 'Y');
-		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
-
-		$this->db->where('store_id', $this->store->id);
-		$content['store'] = $this->store;
-		$content['category'] = $this->db->get('category')->result();
-
-		$this->db->where('store_id', $this->store->id);
-		$this->db->where('deleted_at', null);
-		$content['news'] = $this->db->get('news')->result();
-
-		$this->db->where('store_id', $this->store->id);
-		$this->db->where('deleted_at', null);
-		$content['client'] = $this->db->get('client')->result();
-
-		$data['content'] = $this->load->view('home_view', $content, TRUE);
-		$data['meta'] = [
-			'title'=>$this->store->title,
-			'desc'=>$this->store->desc,
-			'keyword'=>$this->store->keyword,
-			'image'=>base_url($this->store->image),
-		];
-		$this->load->view('template_view', $data);
-	}
-
-	public function produk($slug='')
+	public function index($slug='')
 	{
 		if($this->input->get('search', true)){
 			$this->db->like('name', $this->input->get('search', true));

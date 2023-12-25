@@ -53,10 +53,11 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['index.html'] = 'home';
-$route['produk'] = 'home/produk';
+$route['produk'] = 'produk/index';
+$route['category/(:any)'] = 'produk/index/$1';
+$route['produk/(:any)'] = 'produk/detail/$1';
 $route['sitemap.xml'] = 'sitemap/index';
 $route['(:any)/sitemap.xml'] = 'sitemap/$1';
-$route['produk/(:any)'] = 'home/produk/$1';
 $route['(:any)'] = 'home/detail/$1';
 
 
