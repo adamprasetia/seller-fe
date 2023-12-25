@@ -62,7 +62,7 @@
 <div class="container">
 	<div class="mt-3 text-center">
 		<?php if($item->pdf):?>
-			<a download href="<?php echo base_url('assets/pdf/'.$item->pdf) ?>" class="btn btn-danger">Donwload PDF</a>
+			<a download href="<?php echo base_url($item->pdf) ?>" class="btn btn-danger">Donwload PDF</a>
 		<?php endif ?>
 
 		<a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $store->wa ?>&text=<?php echo config_item('wa') ?>" class="btn btn-danger">Info Lebih Lanjut</a>
