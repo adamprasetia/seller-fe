@@ -31,6 +31,7 @@ class Home extends CI_Controller {
 
 		$this->db->where('store_id', $this->store->id);
 		$this->db->where('active', 'Y');
+		$this->db->limit(4);
 		$content['item'] = $this->db->order_by('rank asc')->get('item')->result();
 
 		$this->db->where('store_id', $this->store->id);
@@ -39,10 +40,12 @@ class Home extends CI_Controller {
 
 		$this->db->where('store_id', $this->store->id);
 		$this->db->where('deleted_at', null);
+		$this->db->limit(3);
 		$content['news'] = $this->db->get('news')->result();
 
 		$this->db->where('store_id', $this->store->id);
 		$this->db->where('deleted_at', null);
+		$this->db->limit(3);
 		$content['client'] = $this->db->get('client')->result();
 
 		$data['content'] = $this->load->view('home_view', $content, TRUE);

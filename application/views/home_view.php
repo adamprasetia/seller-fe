@@ -33,3 +33,40 @@
 		<?php } ?>
 	</div>
 </div>
+<?php if(!empty($news)):?>
+<div class="container mt-3 mb-3" >
+	<h2 id="news" class="text-center">News</h2>
+	<div class="row">
+	<?php foreach ($news as $key => $value) { ?>
+		<div class="col-md-4">
+		<div class="card" style="width: 18rem;">
+			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
+			<div class="card-body">
+				<a href="<?php echo base_url('news/'.$value->slug) ?>"><h5 class="card-title"><?php echo $value->title ?></h5></a>
+				<p class="card-text"><?php echo $value->desc ?></p>
+			</div>
+		</div>
+		</div>
+	<?php } ?>
+	</div>
+</div>
+<?php endif ?>
+
+<?php if(!empty($client)):?>
+<div class="container mt-3 mb-3">
+	<h2 id="client" class="text-center">Client</h2>
+	<div class="row">
+	<?php foreach ($client as $key => $value) { ?>
+		<div class="col-md-4">
+		<div class="card" style="width: 18rem;">
+			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
+			<div class="card-body">
+				<h5 class="card-title"><?php echo $value->title ?></h5>
+				<p class="card-text"><?php echo $value->desc ?></p>
+			</div>
+		</div>
+		</div>
+	<?php } ?>
+	</div>
+</div>
+<?php endif ?>
