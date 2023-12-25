@@ -64,7 +64,7 @@
 						<h5><i class="fa fa-whatsapp"></i> <?php echo $store->phone ?></h5>					
 						<h5><i class="fa fa-envelope"></i> <?php echo $store->email ?></h5>					
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 mt-4 mt-md-0">
 						<?php if(!empty($category)): ?>
 							<p><strong>Model</strong></p>
 							<ul>
@@ -83,8 +83,8 @@
 				<small>Develop by <a href="https://www.linkedin.com/in/adam-prasetia-449405109/">Adam Prasetia</a></small>
 			</div>
 		</div>
-		<div style="position:fixed;bottom:30px;right:10px">
-			<a class="btn btn-success" href="https://api.whatsapp.com/send?phone=<?php echo $store->wa ?>&text=<?php echo config_item('wa') ?>"><img width="40px" src="<?php echo base_url('assets/images/ico-wa-white.png') ?>" alt=""> Kirim Whatsapp</a>
+		<div style="position:fixed;bottom:80px;right:10px;z-index:99">
+			<a class="btn btn-success" href="https://api.whatsapp.com/send?phone=<?php echo $store->wa ?>&text=<?php echo config_item('wa') ?>"><i class="fa fa-whatsapp"></i> Kirim Whatsapp</a>
 		</div>
 
 		<script>
