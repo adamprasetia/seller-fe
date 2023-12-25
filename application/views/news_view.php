@@ -5,7 +5,7 @@
 	<div class="row">
 	<?php foreach ($news as $key => $value) { ?>
 		<div class="col-md-4">
-		<div class="card" style="width: 18rem;">
+		<div class="card">
 			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
 			<div class="card-body">
 				<a href="<?php echo base_url('news/'.$value->slug) ?>"><h5 class="card-title"><?php echo $value->title ?></h5></a>
