@@ -4,7 +4,7 @@
     <h1 id="news" class="text-center">News</h1>
 	<div class="row">
 	<?php foreach ($news as $key => $value) { ?>
-		<div class="col-md-4">
+		<div class="col-md-4 mb-2">
 		<div class="card">
 			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
 			<div class="card-body">
