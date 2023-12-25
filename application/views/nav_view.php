@@ -14,6 +14,9 @@
         <li class="nav-item <?php echo $this->uri->segment(1) == 'produk'?'active':'' ?>">
           <a class="nav-link" href="<?php echo base_url('produk') ?>">Produk</a>
         </li>
+        <li class="nav-item <?php echo $this->uri->segment(1) == 'news'?'active':'' ?>">
+          <a class="nav-link" href="<?php echo base_url('news') ?>">news</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $store->wa ?>">Test Drive</a>
         </li>
