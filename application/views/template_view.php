@@ -41,6 +41,7 @@
 		<link rel="shortcut icon" type="image/icon" href="<?php echo base_url($store->icon) ?>"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">       
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>">       
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     </head>
 	
@@ -60,7 +61,8 @@
 						<p><strong><?php echo $store->title ?></strong></p>
 						<p><?php echo $store->address ?></p>
 						<h3><?php echo $store->pic ?></h3>					
-						<h4><img width="40px" src="<?php echo base_url('assets/images/ico-wa-white.png') ?>" alt=""> <?php echo $store->phone ?></h4>					
+						<h5><i class="fa fa-whatsapp"></i> <?php echo $store->phone ?></h5>					
+						<h5><i class="fa fa-envelope"></i> <?php echo $store->email ?></h5>					
 					</div>
 					<div class="col-md-4">
 						<?php if(!empty($category)): ?>
