@@ -34,12 +34,14 @@
 	</div>
 </div>
 <?php if(!empty($news)):?>
+<hr>
 <div class="container mt-3 mb-3" >
 	<h2 id="news" class="text-center">News</h2>
+	<p class="text-center">Kumpulan info dan promo menarik</p>
 	<div class="row">
 	<?php foreach ($news as $key => $value) { ?>
 		<div class="col-md-4">
-		<div class="card" style="width: 18rem;">
+		<div class="card mb-2">
 			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
 			<div class="card-body">
 				<a href="<?php echo base_url('news/'.$value->slug) ?>"><h5 class="card-title"><?php echo $value->title ?></h5></a>
@@ -53,12 +55,14 @@
 <?php endif ?>
 
 <?php if(!empty($client)):?>
+<hr>
 <div class="container mt-3 mb-3">
 	<h2 id="client" class="text-center">Client</h2>
+	<p class="text-center">Testimoni dari pelanggan setia Toyota</p>
 	<div class="row">
 	<?php foreach ($client as $key => $value) { ?>
 		<div class="col-md-4">
-		<div class="card" style="width: 18rem;">
+		<div class="card">
 			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
 			<div class="card-body">
 				<h5 class="card-title"><?php echo $value->title ?></h5>
