@@ -6,14 +6,16 @@
 	<div class="row justify-content-center">
 	<?php foreach ($news as $key => $value) { ?>
 		<div class="col-md-4">
+        <a href="<?php echo base_url('news/'.$value->slug) ?>">
 		<div class="card mb-2">
 			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
-			<div class="card-body">
-				<a href="<?php echo base_url('news/'.$value->slug) ?>"><h5 class="card-title"><?php echo $value->title ?></h5></a>
+			<div class="card-body text-dark">
+				<h5 class="card-title"><?php echo $value->title ?></h5>
 				<p class="card-text"><?php echo $value->desc ?></p>
 				<small><?php echo format_date($value->published_at, 1) ?></small>
 			</div>
 		</div>
+        </a>
 		</div>
 	<?php } ?>
 	</div>
