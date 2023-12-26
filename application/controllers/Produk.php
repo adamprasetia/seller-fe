@@ -63,6 +63,20 @@ class Produk extends CI_Controller {
 		$content['item'] = $this->db->where('slug', $slug)->get('item')->row();
 		$this->db->where('store_id', $this->store->id);
 		$content['category'] = $this->db->get('category')->result();
+
+		$this->db->where('store_id', $this->store->id);
+		$this->db->where('active', 'Y');
+		$this->db->where('deleted_at', null);
+		$this->db->where('slug !=', $slug);
+		$this->db->limit(3);
+		$content['item_lain'] = $this->db->order_by('rank asc')->get('item')->result();
+
+		$this->db->where('store_id', $this->store->id);
+		$this->db->where('status', 'PUBLISH');
+		$this->db->where('deleted_at', null);
+		$this->db->limit(3);
+		$content['news'] = $this->db->order_by('published_at desc')->get('news')->result();
+
 		$data['content'] = $this->load->view('detail_view', $content, TRUE);
 		$data['meta'] = [
 			'title'=>$content['item']->name,
