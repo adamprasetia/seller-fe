@@ -14,7 +14,7 @@
                     <div class="card text-dark">
                         <img data-src="<?php echo base_url(str_replace('/ori_','/300x300_',$value->image)) ?>" class="lozad card-img-top" alt="<?php echo htmlentities($value->name) ?>">
                         <div class="card-body text-center">
-                            <h3 class="card-title"><?php echo $value->name ?></h3>
+                            <h5 class="card-title"><?php echo $value->name ?></h5>
                             <?php if(!empty($value->price)): ?>
                                 <p class="card-text"><?php echo $value->price ?></p>
                             <?php endif ?>
