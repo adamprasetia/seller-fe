@@ -18,7 +18,7 @@
                             <?php if(!empty($value->price)): ?>
                                 <p class="card-text"><?php echo $value->price ?></p>
                             <?php endif ?>
-                            <a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="Lihat Detail" class="btn btn-default">Lihat Detail</a>
+                            <!-- <a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="Lihat Detail" class="btn btn-default">Lihat Detail</a> -->
                         </div>
                     </div>		
                 </a>	
