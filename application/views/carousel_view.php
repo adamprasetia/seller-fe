@@ -10,7 +10,7 @@
       <?php $i=1;foreach ($headline as $key => $value) { ?>		
         <?php if(!empty($value->cover)){ ?>		
             <div class="carousel-item <?php echo $i++ == 1?'active':'' ?>">
-                <a aria-label="<?php echo htmlentities($value->name) ?>" href="<?php echo base_url($value->slug) ?>"><img class="d-block w-100" src="<?php echo base_url($value->cover) ?>" alt=""></a>
+                <a aria-label="<?php echo htmlentities($value->name) ?>" href="<?php echo base_url('produk/'.$value->slug) ?>"><img class="d-block w-100" src="<?php echo base_url($value->cover) ?>" alt=""></a>
             </div>
         <?php } ?>
     <?php } ?>
