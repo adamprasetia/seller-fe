@@ -69,54 +69,5 @@
 	</div>
 </div>
 
-<?php if(!empty($item_lain)): ?>
-<hr>
-<div class="container text-center">
-	<h2>Produk Lainnya</h2>
-	<div class="row d-flex justify-content-center">
-		<?php foreach ($item_lain as $key => $value) { ?>
-			<div class="col-md-3 p-2">
-				<a class="text-dark" href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="<?php echo htmlentities($value->name) ?>">
-				<div class="card">
-					<img data-src="<?php echo base_url($value->image) ?>" class="lozad card-img-top" alt="<?php echo htmlentities($value->name) ?>">
-					<div class="card-body text-center">
-						<h3 class="card-title"><?php echo $value->name ?></h3>
-						<?php if(!empty($value->price)): ?>
-							<p class="card-text"><?php echo $value->price ?></p>
-						<?php endif ?>
-						<!-- <a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="View Detail" class="btn btn-danger">View Detail</a> -->
-					</div>
-				</div>			
-				</a>
-			</div>
-		<?php } ?>
-	</div>
-	<div class="text-center">
-		<a href="<?php echo base_url('produk') ?>" aria-label="View Detail" class="btn btn-danger">Lihat Produk Lainnya</a>
-	</div>
-</div>
-<?php endif ?>
-
-<?php if(!empty($news)):?>
-<hr>
-<div class="container mt-3 mb-3" >
-	<h2 id="news" class="text-center">Info dan Promo</h2>
-	<div class="row justify-content-center">
-	<?php foreach ($news as $key => $value) { ?>
-		<div class="col-md-4">
-		<div class="card mb-2">
-			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
-			<div class="card-body">
-				<a href="<?php echo base_url('news/'.$value->slug) ?>"><h5 class="card-title"><?php echo $value->title ?></h5></a>
-				<p class="card-text"><?php echo $value->desc ?></p>
-				<small><?php echo format_date($value->published_at, 1) ?></small>
-			</div>
-		</div>
-		</div>
-	<?php } ?>
-	</div>
-	<div class="text-center">
-		<a href="<?php echo base_url('news') ?>" aria-label="View Detail" class="btn btn-danger">Lihat Info Selengkapnya</a>
-	</div>
-</div>
-<?php endif ?>
+<?php $this->load->view('produk_list_view', ['item'=>$item_lain, 'more'=>true]) ?>
+<?php $this->load->view('news_list_view', ['more'=>true]) ?>
