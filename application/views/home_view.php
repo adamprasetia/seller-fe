@@ -21,7 +21,7 @@
 	<?php foreach ($client as $key => $value) { ?>
 		<div class="col-md-4">
 		<div class="card">
-			<img class="lozad card-img-top" data-src="<?php echo base_url($value->image) ?>" alt="<?php echo htmlentities($value->title) ?>">
+			<img class="lozad card-img-top" data-src="<?php echo base_url(str_replace('/ori_','/300x300_',$value->image)) ?>" alt="<?php echo htmlentities($value->title) ?>">
 			<div class="card-body">
 				<h5 class="card-title"><?php echo $value->title ?></h5>
 				<p class="card-text"><?php echo $value->desc ?></p>
