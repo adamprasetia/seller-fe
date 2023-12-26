@@ -11,14 +11,14 @@
         <?php foreach ($item as $key => $value) { ?>
             <div class="col-md-3 p-2">
                 <a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="<?php echo htmlentities($value->name) ?>">
-                    <div class="card">
-                        <img data-src="<?php echo base_url($value->image) ?>" class="lozad card-img-top" alt="<?php echo htmlentities($value->name) ?>">
+                    <div class="card text-dark">
+                        <img data-src="<?php echo base_url(str_replace('/ori_','/300x300_',$value->image)) ?>" class="lozad card-img-top" alt="<?php echo htmlentities($value->name) ?>">
                         <div class="card-body text-center">
-                            <h3 class="card-title text-dark"><?php echo $value->name ?></h3>
+                            <h3 class="card-title"><?php echo $value->name ?></h3>
                             <?php if(!empty($value->price)): ?>
                                 <p class="card-text"><?php echo $value->price ?></p>
                             <?php endif ?>
-                            <!-- <a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="Lihat Detail" class="btn btn-danger">Lihat Detail</a> -->
+                            <a href="<?php echo base_url('produk/'.$value->slug) ?>" aria-label="Lihat Detail" class="btn btn-default">Lihat Detail</a>
                         </div>
                     </div>		
                 </a>	
