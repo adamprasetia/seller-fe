@@ -60,6 +60,4 @@ $route['category/(:any)'] = 'produk/index/$1';
 $route['produk/(:any)'] = 'produk/detail/$1';
 $route['news/(:any)'] = 'news/detail/$1';
 $route['sitemap.xml'] = 'sitemap/index';
-$route['(:any)'] = 'home/detail/$1';
-
 
